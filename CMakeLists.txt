@@ -83,10 +83,10 @@ include(CMakeDependentOption)
 # not support it.
 
 # Setup shared library / -fPIC stuff
-get_property(SHARED_LIBS_SUPPORTED GLOBAL PROPERTY TARGET_SUPPORTS_SHARED_LIBS)
-cmake_dependent_option(BUILD_SHARED_LIBS
-  "Whether or not to build shared libraries" ON
-  "SHARED_LIBS_SUPPORTED" OFF)
+# get_property(SHARED_LIBS_SUPPORTED GLOBAL PROPERTY TARGET_SUPPORTS_SHARED_LIBS)
+# cmake_dependent_option(BUILD_SHARED_LIBS
+#   "Whether or not to build shared libraries" ON
+#   "SHARED_LIBS_SUPPORTED" OFF)
 
 # PIC is always on for shared libs.  This allows it to be selectable for
 # static libs.
